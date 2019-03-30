@@ -15,8 +15,9 @@ namespace Working_with_Nullable
                 Console.WriteLine(player.Name);
             }
 
-            int days = player.DaysSinceLastLogin.HasValue ? player.DaysSinceLastLogin.Value : -1 ;
-           // int days = player.DaysSinceLastLogin.GetValueOrDefault(-1);
+            int days = player.DaysSinceLastLogin ??  -1;//Null-coalescing Operator
+            // int days = player.DaysSinceLastLogin.HasValue ? player.DaysSinceLastLogin.Value : -1 ;Conditional Operator
+            // int days = player.DaysSinceLastLogin.GetValueOrDefault(-1);
             Console.WriteLine($"{days} days since last login");
 
             //if (player.DaysSinceLastLogin.HasValue)

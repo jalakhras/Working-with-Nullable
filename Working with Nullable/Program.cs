@@ -6,12 +6,19 @@ namespace Working_with_Nullable
     {
         static void Main(string[] args)
         {
-            var player = new PlayerCharacter();
-            player.Name = null;// "Jassar";
+            PlayerCharacter player = new PlayerCharacter() ;
             player.DaysSinceLastLogin = 42;
+            int days = player?.DaysSinceLastLogin ?? -1;
+            //if (player !=null)
+            //{
+            //    days = player.DaysSinceLastLogin ?? -1;
+            //}
+            //else
+            //{
+            //    days = -1;
+            //}
+            Console.WriteLine(days);
 
-
-            PlayerDisplayer.Write(player);
 
 
             Console.ReadLine();
