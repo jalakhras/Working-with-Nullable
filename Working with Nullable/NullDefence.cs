@@ -1,10 +1,10 @@
 ﻿namespace Working_with_Nullable
 {
-    public class DiamondSkinDefence : ISpecialDefence
+    class NullDefence : ISpecialDefence
     {
         public int CalculateDamageReduction(int totalDamage)
         {
-            return 1;
+            return 0; // no operation /  "do nothing" behavior
         }
     }
 }

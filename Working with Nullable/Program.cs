@@ -16,7 +16,7 @@ namespace Working_with_Nullable
                 Name = "Hussam"
             };
 
-            PlayerCharacter jaffar = new PlayerCharacter(null)
+            PlayerCharacter jaffar = new PlayerCharacter(new NullDefence())
             {
                 Name = "Jaffar"
             };
