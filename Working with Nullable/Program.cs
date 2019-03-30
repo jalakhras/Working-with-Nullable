@@ -6,18 +6,25 @@ namespace Working_with_Nullable
     {
         static void Main(string[] args)
         {
-            //PlayerCharacter[] players = new PlayerCharacter[3]
-            //{
-            //    new PlayerCharacter {Name = "jassar"},
-            //    new PlayerCharacter(), // Name = null 
-            //    null // PlayerCharacter = null
-            //};
+            PlayerCharacter jassar = new PlayerCharacter(new DiamondSkinDefence())
+            {
+                Name = "Jassar"
+            };
 
-            PlayerCharacter[] players = null;
+            PlayerCharacter hussam = new PlayerCharacter(new IronBonesDefence())
+            {
+                Name = "Hussam"
+            };
 
-            string p1 = players?[0]?.Name;
-            string p2 = players?[1]?.Name;
-            string p3 = players?[2]?.Name;
+            PlayerCharacter jaffar = new PlayerCharacter(null)
+            {
+                Name = "Jaffar"
+            };
+
+            jassar.Hit(10);
+            hussam.Hit(10);
+            jaffar.Hit(10);
+
 
             Console.ReadLine();
         }
