@@ -6,7 +6,15 @@ namespace Working_with_Nullable
     {
         public static void Write(PlayerCharacter player)
         {
-            Console.WriteLine(player.Name);
+            if (string.IsNullOrWhiteSpace(player.Name))
+            {
+                Console.WriteLine("Player name is null or all whitespace");
+            }
+            else
+            {
+                Console.WriteLine(player.Name);
+            }
+
             if (player.DaysSinceLastLogin == null)
             {
                 Console.WriteLine("No value for DaysSinceLastLogin");

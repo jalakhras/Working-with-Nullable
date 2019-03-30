@@ -7,7 +7,7 @@ namespace Working_with_Nullable
         static void Main(string[] args)
         {
             var player = new PlayerCharacter();
-            player.Name = "Jassar";
+            player.Name = null;// "Jassar";
             player.DaysSinceLastLogin = 42;
 
 
