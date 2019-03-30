@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Working_with_Nullable
 {
@@ -10,6 +6,15 @@ namespace Working_with_Nullable
     {
         static void Main(string[] args)
         {
+            var player = new PlayerCharacter();
+            player.Name = "Jassar";
+            player.DaysSinceLastLogin = 42;
+
+
+            PlayerDisplayer.Write(player);
+
+
+            Console.ReadLine();
         }
     }
 }
