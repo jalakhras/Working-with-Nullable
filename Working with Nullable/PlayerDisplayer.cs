@@ -15,23 +15,23 @@ namespace Working_with_Nullable
                 Console.WriteLine(player.Name);
             }
 
-            if (player.DaysSinceLastLogin == null)
+            if (player.DaysSinceLastLogin.HasValue)
+            {
+                Console.WriteLine(player.DaysSinceLastLogin.Value);                
+            }
+            else
             {
                 Console.WriteLine("No value for DaysSinceLastLogin");
+
+            }
+            if (player.DateOfBirth.HasValue)
+            {
+             Console.WriteLine(player.DateOfBirth.Value);
             }
             else
-            {
-                Console.WriteLine(player.DaysSinceLastLogin);
+            {Console.WriteLine("No date of birth specified");
             }
-            if (player.DateOfBirth ==null)
-            {
-                Console.WriteLine("No date of birth specified");
-            }
-            else
-            {
-                Console.WriteLine(player.DateOfBirth);
-            }
-            if (player.IsNoob == null)
+            if (!player.IsNoob.HasValue)
             {
                 Console.WriteLine("Player newbie status is unknown");
             }
