@@ -8,7 +8,7 @@ namespace Working_with_Nullable
         {
             var player = new PlayerCharacter();
             player.Name = null;// "Jassar";
-            //player.DaysSinceLastLogin = 42;
+            player.DaysSinceLastLogin = 42;
 
 
             PlayerDisplayer.Write(player);

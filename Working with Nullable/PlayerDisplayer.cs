@@ -15,15 +15,19 @@ namespace Working_with_Nullable
                 Console.WriteLine(player.Name);
             }
 
-            if (player.DaysSinceLastLogin.HasValue)
-            {
-                Console.WriteLine(player.DaysSinceLastLogin.Value);                
-            }
-            else
-            {
-                Console.WriteLine("No value for DaysSinceLastLogin");
+            int days = player.DaysSinceLastLogin.GetValueOrDefault(-1);
+            Console.WriteLine($"{days} days since last login");
 
-            }
+            //if (player.DaysSinceLastLogin.HasValue)
+            //{
+            //    Console.WriteLine(player.DaysSinceLastLogin.Value);                
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No value for DaysSinceLastLogin");
+
+            //}
+
             if (player.DateOfBirth.HasValue)
             {
              Console.WriteLine(player.DateOfBirth.Value);
@@ -31,6 +35,7 @@ namespace Working_with_Nullable
             else
             {Console.WriteLine("No date of birth specified");
             }
+
             if (!player.IsNoob.HasValue)
             {
                 Console.WriteLine("Player newbie status is unknown");
