@@ -18,10 +18,10 @@ namespace Working_with_Nullable
         {
             int damageReduction = 0;
 
-            //if (_specialDefence != null)
-            //{
+            if (_specialDefence != null)
+            {
                 damageReduction = _specialDefence.CalculateDamageReduction(damage);
-            //}
+            }
 
             int totalDamageTaken = damage - damageReduction;
 
