@@ -11,12 +11,12 @@ namespace Working_with_Nullable
                 Name = "Jassar"
             };
 
-            PlayerCharacter hussam = new PlayerCharacter(new IronBonesDefence())
+            PlayerCharacter hussam = new PlayerCharacter(SpecialDefence.Null)
             {
                 Name = "Hussam"
             };
 
-            PlayerCharacter jaffar = new PlayerCharacter(new NullDefence())
+            PlayerCharacter jaffar = new PlayerCharacter(SpecialDefence.Null)
             {
                 Name = "Jaffar"
             };

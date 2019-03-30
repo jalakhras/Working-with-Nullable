@@ -4,9 +4,9 @@ namespace Working_with_Nullable
 {
     class PlayerCharacter
     {
-        private readonly ISpecialDefence _specialDefence;
+        private readonly SpecialDefence _specialDefence;
 
-        public PlayerCharacter(ISpecialDefence specialDefence)
+        public PlayerCharacter(SpecialDefence specialDefence)
         {
             _specialDefence = specialDefence;
         }
